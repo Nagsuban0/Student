@@ -12,8 +12,10 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
       margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
     }
 
     .logo {
@@ -21,6 +23,8 @@
       font-weight: bold;
       color: #2c3e50;
       margin-bottom: 30px;
+      text-align: center;
+      word-wrap: break-word;
     }
 
     .container {
@@ -29,8 +33,9 @@
       border-radius: 12px;
       box-shadow: 0 8px 16px rgba(0,0,0,0.1);
       text-align: center;
-      width: 90%;
+      width: 100%;
       max-width: 400px;
+      box-sizing: border-box;
     }
 
     input[type="text"] {
@@ -40,6 +45,7 @@
       border: 1px solid #ced4da;
       border-radius: 6px;
       margin-bottom: 20px;
+      box-sizing: border-box;
     }
 
     button {
@@ -62,6 +68,7 @@
       margin-top: 20px;
       font-size: 1rem;
       color: #212529;
+      word-wrap: break-word;
     }
 
     .loading {
@@ -75,11 +82,34 @@
     .error {
       color: #dc3545;
     }
+
+    /* Responsive typography for smaller screens */
+    @media (max-width: 400px) {
+      .logo {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+      
+      .container {
+        padding: 30px 20px;
+      }
+
+      input[type="text"],
+      button {
+        font-size: 0.9rem;
+        padding: 10px;
+      }
+
+      .output {
+        font-size: 0.9rem;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <div class="logo">MyWebsite</div>
+  <div class="logo">Student IT-A</div>
+  <p>Kung hindi ka IT-A wag ka mag lagay ng name mo merong link para sainyo</p>
 
   <div class="container">
     <h2>Enter Your Full Name</h2>
